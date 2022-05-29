@@ -128,27 +128,43 @@ class Empresa(tk.Frame):
 
     def __init__(self, parent, controller):
 
-        global imge0,imge1
+        global imge0,imge1,imge2,imge3,imge4,imge5,imge6
 
         imge0 = tk.PhotoImage(file="./images/planos.png")
         imge1 = tk.PhotoImage(file="./images/contratar.png")
+        imge2 = tk.PhotoImage(file="./images/fundoEmpresa.png")
+        imge3 = tk.PhotoImage(file="./images/celularBotao.png")
+        imge4 = tk.PhotoImage(file="./images/casaBotao.png")
+        imge5 = tk.PhotoImage(file="./images/empresaBotao.png")
+        imge6 = tk.PhotoImage(file="./images/seta.png")
 
         tk.Frame.__init__(self, parent)
         self.controller = controller
         self.configure(bg='#16212D')
 
-        # Logo
-        tk.Button(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=250)
-        tk.Button(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=290)
-        tk.Button(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=330)
-        tk.Button(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=370)
-        tk.Button(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=410)
+        tk.Label(self, image=imge2, bd=0, bg='#16212D').place(x=0, y=20)
+        tk.Label(self, text="TIM", bd=0, bg='#16212D', foreground='#FFFFFF', font=controller.title_font).place(x=215, y=210)
+        tk.Button(self, image=imge6, bd=0, bg='#16212D', activebackground='#16212D', command=lambda: controller.show_frame("Mapa")).place(x=20, y=20)
 
-        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=250)
-        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=290)
-        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=330)
-        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=370)
-        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=410)
+        tk.Button(self, image=imge3, bd=0, bg='#16212D', activebackground='#16212D').place(x=100, y=265)
+        tk.Button(self, image=imge4, bd=0, bg='#16212D', activebackground='#16212D').place(x=220, y=265)
+        tk.Button(self, image=imge5, bd=0, bg='#16212D', activebackground='#16212D').place(x=340, y=265)
+
+        # Planos
+        tk.Label(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=310)
+        tk.Label(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=350)
+        tk.Label(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=390)
+        tk.Label(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=430)
+        tk.Label(self, image=imge0, bd=0, bg='#16212D', activebackground='#16212D').place(x=30, y=470)
+
+        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=310)
+        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=350)
+        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=390)
+        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=430)
+        tk.Button(self, image=imge1, bd=0, bg='#16212D', activebackground='#16212D').place(x=350, y=470)
+
+
+
 
 
 
